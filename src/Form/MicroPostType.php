@@ -13,8 +13,7 @@ class MicroPostType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('text')
-        ;
+            ->add('text');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
