@@ -3,7 +3,7 @@
  {% block body %}
     <div>
         {% if messages|length > 0 %}
-            {% for key, message in messages|slice(0, limit) %}
+            {% for key, message in messages %}
             <div>
             <a href="{{ path('app_show_one', {id: key}) }}">{{message.message}}</a>
             </div>
