@@ -32,6 +32,7 @@
             <div class="text-right">
                 <div class="text-sm text-gray-500 dark:text-gray-400 flex">
                     {# {% if is_granted('IS_AUTHENTICATED_FULLY') %} #}
+                    {% if app.user %}
                     <div>
                         <a href="{{ path('app_micro_post_add') }}">Add New</a>
                     </div>
@@ -41,14 +42,14 @@
                     <div class="ml-2">
                         <a href="{{ path('app_logout') }}">Logout</a>
                     </div>
-                    {# {% else %} #}
+                    {% else %}
                     <div>
                         <a href="{{ path('app_login') }}">Login</a>
                     </div>
                     {# <div class="ml-2">
                         <a href="{{ path('app_register') }}">Register</a>
-                    </div>
-                    {% endif %} #}
+                    </div> #}
+                    {% endif %}
                 </div>
             </div>
         </div>
